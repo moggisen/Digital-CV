@@ -1,0 +1,151 @@
+/* ----- PROJEKT YTAN ----- */
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%; 
+  width: 100%;
+  text-align: center;
+  padding-top: 150px; 
+  padding-bottom: 50px;
+}
+
+/* ----- PROJEKT SIDAN - UPPDATERAD BAKGRUND ----- */
+.projects-page {
+  background: url("../../assets/backgrounds/background.jpg") center/cover
+    no-repeat fixed;
+  background-attachment: fixed;
+  min-height: 100vh; /* Fyller hela skärmen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ----- PROJEKT KORTEN OVERALL STYLING ----- */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #ffff;
+  font-size: 1.1rem;
+}
+
+/* ----- PROJKET KORTEN ( FÖR VARJE ) */
+.project-card {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent vit */
+  backdrop-filter: blur(10px); /* Glass-effekt */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+/* ----- BILDEN ----- */
+.project-card img {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* ----- HOVER EFFEKT PROJEKT BILDEN ----- */
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+h3 {
+  font-family: "Indie Flower", serif;
+  font-size: 1.5rem;
+}
+
+/* ----- LÄS MER KNAPPEN PÅ PROJEKT KORTEN ----- */
+.project-card button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- HOVER EFFEKT FÖR LÄS MER KNAPPEN ----- */
+.project-card button:hover {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- GIT REPO OCH LIVE DEMO ----- */
+.links a {
+  display: inline-block;
+  color: #ff7eb3;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+/* ----- HOVER EFFEKT FÖR GIT REPO OCH LIVE DEMO ----- */
+.links a:hover {
+  color: #d696e9;
+  text-shadow: 0 0 10px rgba(238, 136, 246, 0.8);
+}
+
+/* ----- LADDA FLER ELLER MINDRE PROJEKT KNAPP ----- */
+.load-more,
+.show-less {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- HOVER FÖR LADDA FLER ELLER MINDRE PROJEKT KNAPP ----- */
+.load-more:hover,
+.show.less:hover {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- RESPONSIV DESIGN ----- */
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 20px;
+  }
+
+  .project-cards {
+    margin-left: 30px;
+    grid-template-columns: 1fr; 
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-card:nth-child(1) {
+    margin-top: 110px; 
+  }
+}

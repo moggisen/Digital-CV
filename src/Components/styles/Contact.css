@@ -1,0 +1,202 @@
+/* ----- GLOBAL STYLING FÖR KONTAKT SIDAN */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../../assets/backgrounds/background4.jpg") center/cover
+    no-repeat;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+/* ----- HEADER TEXTEN ----- */
+.contact h2 {
+  font-size: 3.5rem;
+  color: #f7f7f7;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Indie Flower", serif;
+}
+
+/* ----- KONTAKT INFO ----- */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px;
+}
+
+/* ----- PLACERING FÖR KONTAKT INFON ----- */
+.contact {
+  position: relative;
+  top: -50px; /* Flyttar hela sektionen upp 100px */
+}
+
+/* ----- P TEXTEN ----- */
+.contact p {
+  font-size: 1.5rem;
+  color: #fcfcfc;
+  text-align: center;
+  margin: 30px;
+}
+
+/* ----- MEJLADRESSEN ----- */
+.contact-info .email {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+/* ----- EMAIL ORDET ----- */
+.contact-info .email strong {
+  color: #7ed0ff;
+}
+
+/* ----- SOCIALMEDIA IKONERNA ----- */
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* ----- SOCIALMEDIA IKONERNA LÄNKARNA ----- */
+.social-links a {
+  font-size: 3rem;
+  color: #8c8c8c;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ----- HOVER EFEFKT PÅ SOCIALMEDIA IKONERNA ----- */
+.social-links a:hover {
+  color: #7ed0ff;
+  transform: scale(1.1);
+}
+
+/* ----- KNAPP FÖR ATT ÖPPNA KONTAKT FORMULÄRET ----- */
+.show-form-button {
+  position: absolute;
+  bottom: 200px; /* Flyttar knappen 10px från toppen */
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #7ed0ff, #e875ff);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- HOVER EFFEKT FÖR KNAPP ATT ÖPPNA KONTAKT FORMULÄRET ----- */
+.show-form-button:hover {
+  background: linear-gradient(135deg, #4b75ff, #ff7eb3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- GLOBAL STYLING AV KONTAKT FORMULÄRET ----- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Halvtransparent bakgrund */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* För att modal ska vara över allt annat */
+}
+
+/* ----- INNEHÅLLET I KONTAKT FORMULÄRET ----- */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative; /* För att placera kryss-knappen relativt till modalen */
+}
+
+/* ----- STÄNG KNAPPEN ( X ) ----- */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ----- HOVER EFFEKT FÖR STÄNG KNAPPEN ( X ) ----- */
+.close-button:hover {
+  color: #00aaff;
+}
+
+/* ----- FORMULÄR ----- */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-field {
+  margin: 5px;
+}
+
+/* ----- RUBRIKERNA ( NAMN E-POST MEDDELANDE ) ----- */
+label {
+  text-align: left;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ----- INPUT FÄLTEN ----- */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* ----- MEDDELANDE RUTANS STORLEK ----- */
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* ----- SKICKA FORMULÄR KNAPPEN ----- */
+button {
+  padding: 20px 25px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* ----- HOVER EFEKT SKICKA FORMULÄR KNAPPEN ----- */
+button:hover {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- RESPONSIV DESIGN ----- */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 20px;
+  }
+
+  .show-form-button {
+    width: 50%;
+    font-size: 1rem; /* Anpassa knappen för små skärmar */
+  }
+}

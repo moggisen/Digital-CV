@@ -1,0 +1,56 @@
+/* ----- GLOBAL STYLING FÖR HELA SIDAN ----- */
+.home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("../../assets/backgrounds/background2.jpg") center/cover
+    no-repeat;
+}
+
+/* ----- INNEHÅLLER I HOME SEKTIONEN ----- */
+.home-content {
+  max-width: 1000px;
+  color: #f39c12;
+  display: flex;
+  flex-direction: column; /* Gör att innehållet staplas vertikalt */
+  align-items: center; /* Centrera innehållet horisontellt */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+}
+
+/* ----- RUBRIKEN ----- */
+.home h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ----- TEXTEN UNDER RUBRIKEN ----- */
+.home p {
+  font-size: 24px;
+  margin: 5px;
+}
+
+/* ----- SE MINA PROJKET KNAPP ----- */
+.btn {
+  margin: 25px;
+  text-decoration: none;
+  padding: 15px 35px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- HOVER EFFEKT PÅ KNAPPEN ----- */
+.btn:hover {
+  background-color: #f39512;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}

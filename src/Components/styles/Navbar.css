@@ -1,0 +1,60 @@
+
+/* ----- GLOBAL STYLING ----- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  font-family: "Indie Flower", serif;
+}
+
+/* ----- MIN EGEN LOGOTYP ----- */
+.navbar .logo img {
+  width: 95px;
+  border-radius: 100%;
+  margin-top: 7px ;
+}
+
+/* ----- NAVIGERINGSLÄNKARNA ----- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* ----- HOVER EFFEKT PÅ NAVIGERINGSLÄNKARNA ----- */
+.nav-links a:hover {
+  color: #f39c12; /* Färgen när man hovrar över länken */
+}
+
+/* ----- AKTIVA NAVIGERINGSLÄNK ( NÄR MAN ÄR INNE PÅ SIDAN )  */
+.nav-links a.active {
+  color: #f39c12; 
+  font-weight: 600; 
+  text-decoration: underline; 
+}
