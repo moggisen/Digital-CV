@@ -22,19 +22,20 @@ const Navbar = () => {
     dispatch(setActiveLink(link)); // Uppdaterar aktiv länk i Redux när länk klickas
   };
 
+  // Innehållet i navbaren
   return (
     <nav className="navbar">
       <div className="logo">
         <Link to="/">
-          <img src={Logo} alt="Logo" />
+          <img src={Logo} alt="Logo" /> {/* Min logotyp */}
         </Link>
       </div>
       <ul className="nav-links">
         <li>
           <NavLink
             to="/"
-            onClick={() => handleLinkClick("home")}
-            className={activeLink === "home" ? "active" : ""}
+            onClick={() => handleLinkClick("home")} // 🔹 När länken klickas uppdateras Redux state så att "home" blir den aktiva länken.
+            className={activeLink === "home" ? "active" : ""} // När man är på hem sidan är namnet i navbaren aktiv och är orange
           >
             Hem
           </NavLink>
@@ -42,8 +43,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/about"
-            onClick={() => handleLinkClick("about")}
-            className={activeLink === "about" ? "active" : ""}
+            onClick={() => handleLinkClick("about")} // När länken klickas uppdateras Redux state så att "about" blir den aktiva länken.
+            className={activeLink === "about" ? "active" : ""} // När man är på om mig sidan är namnet i navbaren aktiv och är orange
           >
             Om Mig
           </NavLink>
@@ -51,8 +52,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/projects"
-            onClick={() => handleLinkClick("projects")}
-            className={activeLink === "projects" ? "active" : ""}
+            onClick={() => handleLinkClick("projects")} // När länken klickas uppdateras Redux state så att "projects" blir den aktiva länken.
+            className={activeLink === "projects" ? "active" : ""} // När man är på projekt sidan är namnet i navbaren aktiv och är orange
           >
             Projekt
           </NavLink>
@@ -60,8 +61,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/contact"
-            onClick={() => handleLinkClick("contact")}
-            className={activeLink === "contact" ? "active" : ""}
+            onClick={() => handleLinkClick("contact")} // 🔹 När länken klickas uppdateras Redux state så att "contact" blir den aktiva länken.
+            className={activeLink === "contact" ? "active" : ""} // När man är på kontakt sidan är namnet i navbaren aktiv och är orange
           >
             Kontakt
           </NavLink>

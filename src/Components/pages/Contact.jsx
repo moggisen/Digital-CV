@@ -107,7 +107,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Skriv ditt namn"
                   required
-                  ref={nameInputRef} // Ref för fokus
+                  ref={nameInputRef} 
                 />
               </div>
               <div className="form-field">
