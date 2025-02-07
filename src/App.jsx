@@ -6,13 +6,12 @@ import Contact from "./Components/pages/Contact";
 import About from "./Components/pages/About";
 import Projects from "./Components/pages/Projects";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-    
       <div className="main-content">
         <Navbar />
         <Routes>

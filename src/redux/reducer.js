@@ -1,19 +1,26 @@
-// reducer.js
+// actions.js
+export const setActiveLink = (link) => {
+  return {
+    type: "SET_ACTIVE_LINK",
+    payload: link,
+  };
+};
 
+// reducer.js
 const initialState = {
-    activeLink: 'home', // Standardvärde för aktiv länk
-  };
-  
-  const navReducer = (state = initialState, action) => {
-    switch (action.type) {
-      case 'SET_ACTIVE_LINK':
-        return {
-          ...state,
-          activeLink: action.payload, // Uppdaterar aktiv länk
-        };
-      default:
-        return state;
-    }
-  };
-  
-  export default navReducer;
+  activeLink: "home", // Standardlänk vid första renderingen
+};
+
+const navReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "SET_ACTIVE_LINK":
+      return {
+        ...state,
+        activeLink: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export default navReducer;

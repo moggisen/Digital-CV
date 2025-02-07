@@ -1,25 +1,27 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setActiveLink } from "../../redux/actions";
+import { NavLink } from "react-router-dom";
 import Logo from "../../assets/M.T.png";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
-  const dispatch = useDispatch(); // Skapar en dispatch funktion för att skicka actions till Redux store
-  const activeLink = useSelector((state) => state.activeLink); // Hämtar den aktuella aktiva länken från Redux store
+  const dispatch = useDispatch();
+  const activeLink = useSelector((state) => state.activeLink);
+  const location = useLocation(); // Hämta aktuell URL
 
-  // useEffekct-hook som körs en gång när komponenten renderas
+  // useEffect för att synkronisera den aktiva länken baserat på URL
   useEffect(() => {
-    dispatch(setActiveLink("home")); // Sätter "home" som aktiv länk när sidan först laddas
-  }, [dispatch]);
+    const path = location.pathname.split("/")[1] || "home"; // Hämta den aktuella delen av URL
+    dispatch(setActiveLink(path)); // Uppdatera den aktiva länken i Redux
+  }, [location, dispatch]); // Den här effekten körs när location ändras
 
-  // Uppdaterar aktiv länk i Redux när en länk i navbaren klickas
   const handleLinkClick = (link) => {
-    dispatch(setActiveLink(link)); // Uppdaterar aktiv länk till den som klickades
+    dispatch(setActiveLink(link)); // Uppdaterar aktiv länk i Redux när länk klickas
   };
-  //  Innehållet i navbaren
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -29,40 +31,40 @@ const Navbar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <Link
+          <NavLink
             to="/"
-            onClick={() => handleLinkClick("home")} // När länken klickas uppdateras Redux state så att "home" blir den aktiva länken.
-            className={activeLink === "home" ? "active" : ""} // Är man är på Home sidan är namnet i navbaren aktiv och är orange
+            onClick={() => handleLinkClick("home")}
+            className={activeLink === "home" ? "active" : ""}
           >
             Hem
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/about"
-            onClick={() => handleLinkClick("about")} // När länken klickas uppdateras Redux state så att "about" blir den aktiva länken.
-            className={activeLink === "about" ? "active" : ""} // Är man är på Om mig sidan är namnet i navbaren aktiv och är orange
+            onClick={() => handleLinkClick("about")}
+            className={activeLink === "about" ? "active" : ""}
           >
             Om Mig
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/projects"
-            onClick={() => handleLinkClick("projects")} // När länken klickas uppdateras Redux state så att "project" blir den aktiva länken.
-            className={activeLink === "projects" ? "active" : ""} // Är man är på projekt sidan är namnet i navbaren aktiv och är orange
+            onClick={() => handleLinkClick("projects")}
+            className={activeLink === "projects" ? "active" : ""}
           >
             Projekt
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/contact"
-            onClick={() => handleLinkClick("contact")} // När länken klickas uppdateras Redux state så att "contact" blir den aktiva länken.
-            className={activeLink === "contact" ? "active" : ""} // Är man är på Kontakt sidan är namnet i navbaren aktiv och är orange
+            onClick={() => handleLinkClick("contact")}
+            className={activeLink === "contact" ? "active" : ""}
           >
             Kontakt
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
