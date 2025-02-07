@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
 function Home() {
@@ -9,9 +10,9 @@ function Home() {
           <p>FRONT-END STUDENT | KYH </p>
           <p>Webbutvecklare | Designer | Kreativ Tänkare</p>
           <p>Välkommen till mitt Digitala CV</p>
-          <a href="/projects" className="btn">
+          <Link to="/projects" className="btn">
             Se mina projekt
-          </a>
+          </Link>
         </div>
       </section>
     </div>
