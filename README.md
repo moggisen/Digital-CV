@@ -49,5 +49,3 @@ Detta projekt är min examinationsuppgift där uppgiften var att skapa ett digit
 
 - Contact: Sidan där du ser hur du kan kontkata mig antingen via mejl eller sociala medier finns också ett formulär där du kan skicka ett meddelande till mig
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
