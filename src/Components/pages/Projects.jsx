@@ -11,15 +11,6 @@ import Dragon from "../../assets/project.pic/Dragon.png";
 const projects = [
   {
     id: 1,
-    title: "Dragon",
-    description: "En sida för en av mina favoritfilmer",
-    details: "",
-    image: Dragon,
-    repo: "https://github.com/moggisen/Dragon.git",
-    
-  },
-  {
-    id: 2,
     title: "Solaris",
     description: "Mitt examinationsprojekt för Javascript 1.",
     details:
@@ -29,7 +20,7 @@ const projects = [
     
   },
   {
-    id: 3,
+    id: 2,
     title: "Cosmic Café",
     description: "Övning från bootcamp, om ett rymdiskt café",
     details:
@@ -39,7 +30,7 @@ const projects = [
     
   },
   {
-    id: 4,
+    id: 3,
     title: "Timer Watch",
     description: "Kort beskrivning av projekt 2.",
     details: "Detta är den detaljerade beskrivningen för projekt 2.",
