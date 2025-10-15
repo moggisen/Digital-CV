@@ -30,11 +30,6 @@ const ProjectCard = ({ project, toggleDetails, activeProject }) => {
                 {/* Hämtar från arrayen i Project.jsx // _blank öppnar länken i en ny flik // rel="noopener noreferrer" förbättrar säkerheten vid nya flikar  */}
                 GitHub Repo
               </a>
-              <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                {" "}
-                {/* Hämtar från arrayen i Project.jsx // _blank öppnar länken i en ny flik // rel="noopener noreferrer" förbättrar säkerheten vid nya flikar  */}
-                Live Demo
-              </a>
             </div>
           </div>
         )}

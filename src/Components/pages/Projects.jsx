@@ -12,11 +12,11 @@ const projects = [
   {
     id: 1,
     title: "Dragon",
-    description: "En sida jag gjorde baserat på en av mina favoritfilmer",
+    description: "En sida för en av mina favoritfilmer",
     details: "",
     image: Dragon,
     repo: "https://github.com/moggisen/Dragon.git",
-    demo: "https://moggisen.github.io/Dragon/",
+    
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const projects = [
       "Detta var min examinationsprojekt i JavaScript 1, där vi skulle göra en sida om solsystemet och hämta information om alla planeter med hjälp av API.",
     image: Solaris,
     repo: "https://github.com/moggisen/solaris",
-    demo: "https://moggisen.github.io/solaris",
+    
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const projects = [
       "En sida som jag gjorde i vår första kurs HTML & CSS, detta var en bootcamp-övning från kursen.",
     image: Cosmic,
     repo: "https://github.com/moggisen/cosmic-cafe",
-    demo: "https://moggisen.github.io/Cosmic-Cafe",
+    
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const projects = [
     details: "Detta är den detaljerade beskrivningen för projekt 2.",
     image: TimerWatch,
     repo: "https://github.com/moggisen/TimerWatch.git",
-    demo: "https://moggisen.github.io/TimerWatch/",
+    
   },
 ];
 
